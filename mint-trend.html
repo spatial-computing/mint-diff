@@ -108,7 +108,7 @@
           }
         }
         _configChanged(newObj, oldObj) {
-            console.log(newObj);
+            // console.log(newObj);
             if (JSON.stringify(newObj) !== JSON.stringify(oldObj)) {
                 this.initChart(newObj);
             }
@@ -116,7 +116,11 @@
         initChart(obj){
           var self = this;
           if (typeof obj.id === "string" && obj.id.length > 0) {
-              self.selectTrend(obj.id);
+              var trend = $(self.$.trend_datasets).find('option[value=' + obj.id + ']');
+              if (trend.length > 0) {
+                trend.prop('selected',true);
+                self.selectTrend(obj.id);
+              }
           }
         }
         ready(){
