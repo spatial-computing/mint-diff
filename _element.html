@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="mint-trend">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `mint-trend`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class MintTrend extends Polymer.Element {
+      static get is() { return 'mint-trend'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'mint-trend'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(MintTrend.is, MintTrend);
+  </script>
+</dom-module>
