@@ -76,6 +76,7 @@
           <select id="trend_datasets">
              <option disabled selected value>Please select one trend</option>
              <option value="fldas01_fldas02_trend_chart" data-url="http://jonsnow.usc.edu:8081/mintmap/csv/fldas01_fldas02_trend_chart.csv">FLDAS Jan vs Fldas Feb Rainfall_flux Trend</option>
+             <option value="fldas_chirps_trend_chart" data-url="http://jonsnow.usc.edu:8081/mintmap/csv/fldas_chirps_trend_chart.csv" data-connect-null="yes">Fewschips 2001(Jan and Feb) vs Chirps 2018 Yearly Trend</option>
              <option value="fewschips_2018_yearly_trend" data-url="http://jonsnow.usc.edu:8081/mintmap/csv/chirps_trend_chart.csv">Fewschips 2018 Yearly Trend</option>
           </select>
           <div class="select__arrow"></div>
@@ -141,6 +142,10 @@
             return;
           }
           var chartOption =  {
+                chart: {
+                    type: 'line',
+                    zoomType: 'x'
+                },
                 title: {
                     text: trend.html()
                 },
@@ -182,6 +187,7 @@
                 plotOptions: {
                     series: {
                         cursor: 'pointer',
+                        connectNulls: trend.data('connect-null') === 'yes' ? true : false,
                         marker: {
                             lineWidth: 1
                         }
