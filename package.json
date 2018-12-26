@@ -2,6 +2,7 @@
   "name": "mint-trend",
   "description": "Mint Trend of Aggregation",
   "main": "mint-trend.js",
+  "version":"0.1.0",
   "dependencies": {
     "@polymer/polymer": "^3.0.0",
     "highcharts": "^7.0.1",
