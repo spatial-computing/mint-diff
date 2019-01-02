@@ -1,5 +1,8 @@
 # \<mint-trend\>
 
+![Published by Libo Liu](https://img.shields.io/badge/Libo%20Liu-Author-blue.svg)
+![Published by Adam Vaccaro](https://img.shields.io/badge/Adam%20Vaccaro-Author-blue.svg)
+
 Mint Trend of Aggregation
 
 ## Install the Polymer-CLI
